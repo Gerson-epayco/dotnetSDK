@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="epayco.net">
+      <HintPath>..\sdk-.net\EpaycoSdk\bin\Debug\epayco.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+</Project>
