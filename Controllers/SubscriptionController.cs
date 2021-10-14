@@ -25,7 +25,7 @@ namespace epaycoTest.Controllers
         }
 
         [HttpPost("/pay")]
-        public ChargeSubscriptionModel Put([FromBody] Models.SuscriptionPay body)
+        public ChargeSubscriptionModel Post([FromBody] Models.SuscriptionPay body)
         {
             ChargeSubscriptionModel subscription = epayco.ChargeSubscription(
                 body.id_plan,

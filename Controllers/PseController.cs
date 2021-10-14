@@ -32,6 +32,7 @@ namespace epaycoTest.Controllers
               body.value,
               body.tax,
               body.tax_base,
+              body.ico,
               body.currency,
               body.type_person,
               body.doc_type,
@@ -55,7 +56,8 @@ namespace epaycoTest.Controllers
             return response;
         }
 
-        [HttpPost("/splitpayment")]
+        [Route("splitpayment")]
+        [HttpPost]
         public PseModel Post([FromBody] Models.PseSplit body)
         {
             PseModel response = epayco.BankCreateSplit(

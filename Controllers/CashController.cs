@@ -37,7 +37,7 @@ namespace epaycoTest.Controllers
                 body.url_response,
                 body.url_confirmation,
                 body.method_confirmation,
-                body.split_data
+                body.split_details
             );
             return response;
         }

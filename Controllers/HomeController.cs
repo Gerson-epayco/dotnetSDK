@@ -6,10 +6,10 @@ namespace epaycoTest.Controllers
     public class HomeController : ControllerBase
     {
         public EpaycoSdk.Epayco epayco = new EpaycoSdk.Epayco(
-            "c3730256d895667d8aafc6d8778973e1", //String PublicKey
-            "eaf63f9490370b9eb71818ea17f510cb", //String Private Key
+            "32e4e653daf732e428560c3b76743a85", //String PublicKey
+            "0950b3575b9607f22e7851db37699a8b", //String Private Key
             "ES", //String lang
-             true //Boolean TestMode
+             false //Boolean TestMode
            );
     }
 }

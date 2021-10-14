@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using EpaycoSdk.Models.Bank;
+﻿using EpaycoSdk.Models.Bank;
 
 namespace epaycoTest.Models
 {
@@ -28,6 +24,6 @@ namespace epaycoTest.Models
         public string url_response { get; set; }
         public string url_confirmation { get; set; }
         public string method_confirmation { get; set; }
-        public SplitModel split_data { get; set; }
+        public SplitModel split_details { get; set; }
     }
 }
