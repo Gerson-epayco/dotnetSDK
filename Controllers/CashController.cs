@@ -1,5 +1,6 @@
 ﻿using EpaycoSdk.Models.Cash;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace epaycoTest.Controllers
 {
@@ -17,6 +18,7 @@ namespace epaycoTest.Controllers
         [HttpPost]
         public CashModel Post([FromBody] Models.Cash body)
         {
+            string splitData = JsonConvert.SerializeObject(body.split_details);
             CashModel response = epayco.CashCreate(
                 body.type,
                 body.invoice,
@@ -37,7 +39,7 @@ namespace epaycoTest.Controllers
                 body.url_response,
                 body.url_confirmation,
                 body.method_confirmation,
-                body.split_details
+                splitData
             );
             return response;
         }

@@ -84,6 +84,7 @@ namespace epaycoTest.Controllers
               body.split_app_id,
               body.split_merchant_id,
               body.split_type,
+              body.split_rule,
               body.split_primary_receiver,
               body.split_primary_receiver_fee,
               body.split_receivers,
