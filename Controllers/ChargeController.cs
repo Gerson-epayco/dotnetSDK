@@ -40,6 +40,7 @@ namespace epaycoTest.Controllers
                 body.cell_phone,
                 body.url_response,
                 body.url_confirmation,
+                body.method_confirmation,
                 body.ip,
                 body.extra1,
                 body.extra2,

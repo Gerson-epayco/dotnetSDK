@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  epayco-test:
+    container_name: sdk-.net
+    restart: on-failure:5
+    build: .
+    ports:
+      - 9004:5024
+    volumes:
+      - ./:/app/epaycoTest

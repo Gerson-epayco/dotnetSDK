@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="epayco.net">
       <HintPath>..\sdk-.net\EpaycoSdk\bin\Debug\epayco.net.dll</HintPath>
     </Reference>

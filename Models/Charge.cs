@@ -28,6 +28,7 @@ namespace epaycoTest.Models
         public string cell_phone { get; set; }
         public string url_response { get; set; }
         public string url_confirmation { get; set; }
+        public string method_confirmation { get; set; }
         public string ip { get; set; }
         public string extra1 { get; set; }
         public string extra2 { get; set; }
