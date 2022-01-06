@@ -1,6 +1,5 @@
 ﻿using EpaycoSdk.Models.Cash;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace epaycoTest.Controllers
 {
@@ -38,8 +37,7 @@ namespace epaycoTest.Controllers
                 body.url_response,
                 body.url_confirmation,
                 body.method_confirmation,
-                body.split_details
-            );
+                body.split_details);
             return response;
         }
     }

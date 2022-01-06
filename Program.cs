@@ -21,7 +21,6 @@ namespace epaycoTest
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                    webBuilder.useUrls("Http://*:5024")
                 });
     }
 }
