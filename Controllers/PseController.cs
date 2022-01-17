@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace epaycoTest.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/bank")]
     [ApiController]
     public class PseController : HomeController
     {

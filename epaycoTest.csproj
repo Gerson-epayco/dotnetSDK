@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <Reference Include="epayco.net">
-      <HintPath>..\sdk-.net\EpaycoSdk\bin\Debug\epayco.net.dll</HintPath>
+      <HintPath>epaycosdk\epayco.net.dll</HintPath>
     </Reference>
   </ItemGroup>
 

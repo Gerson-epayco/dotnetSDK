@@ -6,6 +6,6 @@ services:
     restart: on-failure:5
     build: .
     ports:
-      - 9004:5024
+      - 9004:80
     volumes:
-      - ./:/app/epaycoTest
+      - ./:/app
