@@ -6,6 +6,4 @@ services:
     restart: on-failure:5
     build: .
     ports:
-      - 9004:80
-    volumes:
-      - ./:/app
+      - 9004:5000
