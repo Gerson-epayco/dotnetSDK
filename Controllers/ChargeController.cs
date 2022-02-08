@@ -1,5 +1,8 @@
 ﻿using EpaycoSdk.Models.Charge;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using System;
+using System.Linq;
 
 namespace epaycoTest.Controllers
 {
@@ -11,6 +14,30 @@ namespace epaycoTest.Controllers
         [HttpGet("{ref_payco}")]
         public ChargeTransactionModel Get(string ref_payco)
         {
+            var headers = Request.Headers;
+            string apikey = "";
+            string privatekey = "";
+            bool test = true;
+            StringValues values;
+            if (headers.ContainsKey("apikey"))
+            {
+                headers.TryGetValue("apikey", out values);
+                apikey = values.FirstOrDefault();
+            }
+
+            if (headers.ContainsKey("privatekey"))
+            {
+                headers.TryGetValue("privatekey", out values);
+                privatekey = values.FirstOrDefault();
+            }
+
+            if (headers.ContainsKey("test"))
+            {
+                headers.TryGetValue("test", out values);
+                test = Convert.ToBoolean(values.FirstOrDefault());
+            }
+
+            EpaycoSdk.Epayco epayco = InitSDK(apikey, privatekey, test);
             ChargeTransactionModel cash = epayco.GetChargeTransaction(ref_payco);
             return cash;
 
@@ -19,6 +46,30 @@ namespace epaycoTest.Controllers
         [HttpPost]
         public ChargeModel Post([FromBody] Models.Charge body)
         {
+            var headers = Request.Headers;
+            string apikey = "";
+            string privatekey = "";
+            bool test = true;
+            StringValues values;
+            if (headers.ContainsKey("apikey"))
+            {
+                headers.TryGetValue("apikey", out values);
+                apikey = values.FirstOrDefault();
+            }
+
+            if (headers.ContainsKey("privatekey"))
+            {
+                headers.TryGetValue("privatekey", out values);
+                privatekey = values.FirstOrDefault();
+            }
+
+            if (headers.ContainsKey("test"))
+            {
+                headers.TryGetValue("test", out values);
+                test = Convert.ToBoolean(values.FirstOrDefault());
+            }
+
+            EpaycoSdk.Epayco epayco = InitSDK(apikey, privatekey, test);
             ChargeModel response = epayco.ChargeCreate(
                 body.token_card,
                 body.customer_id,

@@ -1,14 +1,16 @@
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /webapp
-EXPOSE 80
-EXPOSE 5024
+EXPOSE 5000
 COPY ./*.csproj ./
 RUN dotnet restore
 
-COPY . .
-RUN dotnet publish -c Release -o out
+COPY . ./
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0
+RUN dotnet publish -o out
+
+
+FROM mcr.microsoft.com/dotnet/sdk:3.1
 WORKDIR /webapp
 COPY --from=build /webapp/out .
+EXPOSE 5000
 ENTRYPOINT ["dotnet", "epaycoTest.dll"]

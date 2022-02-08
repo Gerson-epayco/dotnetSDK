@@ -1,5 +1,8 @@
 ﻿using EpaycoSdk.Models.Safetypay;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using System;
+using System.Linq;
 
 namespace epaycoTest.Controllers
 {
@@ -10,7 +13,31 @@ namespace epaycoTest.Controllers
         [HttpPost]
         public safetypayModel Post([FromBody] Models.Safetypay body)
         {
-           safetypayModel response = epayco.safetypayCreate(
+            var headers = Request.Headers;
+            string apikey = "";
+            string privatekey = "";
+            bool test = true;
+            StringValues values;
+            if (headers.ContainsKey("apikey"))
+            {
+                headers.TryGetValue("apikey", out values);
+                apikey = values.FirstOrDefault();
+            }
+
+            if (headers.ContainsKey("privatekey"))
+            {
+                headers.TryGetValue("privatekey", out values);
+                privatekey = values.FirstOrDefault();
+            }
+
+            if (headers.ContainsKey("test"))
+            {
+                headers.TryGetValue("test", out values);
+                test = Convert.ToBoolean(values.FirstOrDefault());
+            }
+
+            EpaycoSdk.Epayco epayco = InitSDK(apikey, privatekey, test);
+            safetypayModel response = epayco.safetypayCreate(
                 body.cash,
                 body.end_date,
                 body.doc_type,
