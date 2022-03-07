@@ -6,4 +6,4 @@ services:
     restart: on-failure:5
     build: .
     ports:
-      - 9004:5000
+      - 9004:44371
