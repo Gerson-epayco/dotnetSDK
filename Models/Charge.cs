@@ -8,6 +8,19 @@ namespace epaycoTest.Models
 {
     public class Charge
     {
+        public Charge() {
+            extra1 = "";
+            extra2 = "";
+            extra3 = "";
+            extra4 = "";
+            extra5 = "";
+            extra6 = "";
+            extra7 = "";
+            extra8 = "";
+            extra9 = "";
+            extra10 = "";
+        }
+
         public string token_card { get; set; }
         public string customer_id { get; set; }
         public string doc_type { get; set; }

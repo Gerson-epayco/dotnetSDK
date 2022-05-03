@@ -89,6 +89,16 @@ namespace epaycoTest.Controllers
                 body.url_response,
                 body.url_confirmation,
                 body.method_confirmation,
+                body.extra1,
+                body.extra2,
+                body.extra3,
+                body.extra4,
+                body.extra5,
+                body.extra6,
+                body.extra7,
+                body.extra8,
+                body.extra9,
+                body.extra10,
                 body.split_details);
             return response;
         }

@@ -37,7 +37,7 @@ namespace epaycoTest.Controllers
             }
 
             EpaycoSdk.Epayco epayco = InitSDK(apikey, privatekey, test);
-            safetypayModel response = epayco.safetypayCreate(
+            safetypayModel response = epayco.SafetypayCreate(
                 body.cash,
                 body.end_date,
                 body.doc_type,
@@ -62,7 +62,17 @@ namespace epaycoTest.Controllers
                 body.url_response,
                 body.url_confirmation,
                 body.url_response_pointer,
-                body.method_confirmation
+                body.method_confirmation,
+                body.extra1,
+                body.extra2,
+                body.extra3,
+                body.extra4,
+                body.extra5,
+                body.extra6,
+                body.extra7,
+                body.extra8,
+                body.extra9,
+                body.extra10
             );
 
             return response;

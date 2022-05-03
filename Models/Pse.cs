@@ -4,7 +4,20 @@ namespace epaycoTest.Models
 {
     public class Pse
     {
-        public string bank_code { get; set; }
+        public Pse () {
+            extra1 = "";
+            extra2 = "";
+            extra3 = "";
+            extra4 = "";
+            extra5 = "";
+            extra6 = "";
+            extra7 = "";
+            extra8 = "";
+            extra9 = "";
+            extra10 = "";
+        }
+
+        public string bank_code { get; set;  }
         public string invoice { get; set; }
         public string description { get; set; }
         public string value { get; set; }
@@ -30,10 +43,29 @@ namespace epaycoTest.Models
         public string extra5 { get; set; }
         public string extra6 { get; set; }
         public string extra7 { get; set; }
+        public string extra8 { get; set; }
+        public string extra9 { get; set; }
+        public string extra10 { get; set; } 
+
     }
+    
+    
 
     public class PseSplit
     {
+        public PseSplit() {
+            extra1 = "";
+            extra2 = "";
+            extra3 = "";
+            extra4 = "";
+            extra5 = "";
+            extra6 = "";
+            extra7 = "";
+            extra8 = "";
+            extra9 = "";
+            extra10 = "";
+        }
+
         public string bank_code { get; set; }
         public string invoice { get; set; }
         public string description { get; set; }
@@ -68,5 +100,8 @@ namespace epaycoTest.Models
         public string extra5 { get; set; }
         public string extra6 { get; set; }
         public string extra7 { get; set; }
+        public string extra8 { get; set; }
+        public string extra9 { get; set; }
+        public string extra10 { get; set; }
     }
 }
