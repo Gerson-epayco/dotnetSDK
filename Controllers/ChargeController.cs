@@ -68,8 +68,8 @@ namespace epaycoTest.Controllers
                 headers.TryGetValue("test", out values);
                 test = Convert.ToBoolean(values.FirstOrDefault());
             }
-
-            EpaycoSdk.Epayco epayco = InitSDK(apikey, privatekey, test);
+            
+            EpaycoSdk.Epayco epayco = InitSDK(apikey, privatekey, false);
             ChargeModel response = epayco.ChargeCreate(
                 body.token_card,
                 body.customer_id,
@@ -87,6 +87,8 @@ namespace epaycoTest.Controllers
                 body.currency,
                 body.dues,
                 body.address,
+                body.country,
+                body.city,
                 body.phone,
                 body.cell_phone,
                 body.url_response,

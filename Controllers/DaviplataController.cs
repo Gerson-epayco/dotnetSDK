@@ -37,7 +37,6 @@ namespace epaycoTest.Controllers
                 test = Convert.ToBoolean(values.FirstOrDefault());
             }
 
-            Console.Write("va a inizialisar el sdk con writeLine " + apikey + ":" + privatekey + " " + test);
 
             EpaycoSdk.Epayco epayco = InitSDK(apikey, privatekey, test);
             DaviplataModel response = epayco.DaviplataCreate(
@@ -59,7 +58,7 @@ namespace epaycoTest.Controllers
                 body.tax, 
                 body.tax_base,
                 body.ico,
-                body.test = false,
+                body.test,
                 body.url_response,
                 body.url_confirmation,
                 body.method_confirmation,

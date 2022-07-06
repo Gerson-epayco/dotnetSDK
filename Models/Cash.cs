@@ -33,6 +33,8 @@ namespace epaycoTest.Models
         public string email { get; set; }
         public string cell_phone { get; set; }
         public string end_date { get; set; }
+        public string country { get; set; }
+        public string city { get; set; }
         public string url_response { get; set; }
         public string url_confirmation { get; set; }
         public string method_confirmation { get; set; }

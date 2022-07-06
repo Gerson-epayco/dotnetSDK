@@ -86,6 +86,8 @@ namespace epaycoTest.Controllers
                 body.email,
                 body.cell_phone,
                 body.end_date,
+                body.country,
+                body.city,
                 body.url_response,
                 body.url_confirmation,
                 body.method_confirmation,

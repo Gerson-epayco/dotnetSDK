@@ -37,6 +37,8 @@ namespace epaycoTest.Models
         public string currency { get; set; }
         public string dues { get; set; }
         public string address { get; set; }
+        public string country { get; set; }
+        public string city { get; set; }
         public string phone { get; set; }
         public string cell_phone { get; set; }
         public string url_response { get; set; }
