@@ -87,6 +87,8 @@ namespace epaycoTest.Controllers
                 body.currency,
                 body.dues,
                 body.address,
+                body.country,
+                body.city,
                 body.phone,
                 body.cell_phone,
                 body.url_response,

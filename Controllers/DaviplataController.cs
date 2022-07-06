@@ -37,8 +37,9 @@ namespace epaycoTest.Controllers
                 test = Convert.ToBoolean(values.FirstOrDefault());
             }
 
+
             EpaycoSdk.Epayco epayco = InitSDK(apikey, privatekey, test);
-            DaviplataModel response = epayco.daviplataCreate(
+            DaviplataModel response = epayco.DaviplataCreate(
                 body.doc_type,
                 body.document,
                 body.name,
@@ -57,10 +58,20 @@ namespace epaycoTest.Controllers
                 body.tax, 
                 body.tax_base,
                 body.ico,
-                body.test = false,
+                body.test,
                 body.url_response,
                 body.url_confirmation,
-                body.method_confirmation
+                body.method_confirmation,
+                body.extra1,
+                body.extra2,
+                body.extra3,
+                body.extra4,
+                body.extra5,
+                body.extra6,
+                body.extra7,
+                body.extra8,
+                body.extra9,
+                body.extra10
             );
             return response;
         }
@@ -92,7 +103,7 @@ namespace epaycoTest.Controllers
             }
 
             EpaycoSdk.Epayco epayco = InitSDK(apikey, privatekey, test);
-            DaviplataConfirmModel response = epayco.daviplataConfirm(
+            DaviplataConfirmModel response = epayco.DaviplataConfirm(
                 body.ref_payco,
                 body.id_session_token,
                 body.otp

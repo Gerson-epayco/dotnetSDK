@@ -35,7 +35,6 @@ namespace epaycoTest.Controllers
                 headers.TryGetValue("test", out values);
                 test = Convert.ToBoolean(values.FirstOrDefault());
             }
-
             EpaycoSdk.Epayco epayco = InitSDK(apikey, privatekey, test);
             BanksModel banks = epayco.GetBanks();
             return banks;
@@ -115,17 +114,21 @@ namespace epaycoTest.Controllers
               body.last_name,
               body.email,
               body.country,
+              body.city,
               body.cell_phone,
               body.url_response,
               body.url_confirmation,
               body.method_confirmation,
-              body.extra1 = "",
-              body.extra2 = "",
-              body.extra3 = "",
-              body.extra4 = "",
-              body.extra5 = "",
-              body.extra6 = "",
-              body.extra7 = ""
+              body.extra1,
+              body.extra2,
+              body.extra3 ,
+              body.extra4,
+              body.extra5,
+              body.extra6,
+              body.extra7,
+              body.extra8,
+              body.extra9,
+              body.extra10
             );
             return response;
         }
@@ -186,13 +189,16 @@ namespace epaycoTest.Controllers
               body.split_primary_receiver,
               body.split_primary_receiver_fee,
               body.split_receivers,
-              body.extra1 = "",
-              body.extra2 = "",
-              body.extra3 = "",
-              body.extra4 = "",
-              body.extra5 = "",
-              body.extra6 = "",
-              body.extra7 = ""
+              body.extra1,
+              body.extra2,
+              body.extra3,
+              body.extra4,
+              body.extra5,
+              body.extra6,
+              body.extra7,
+              body.extra8,
+              body.extra9,
+              body.extra10
             );
             return response;
         }

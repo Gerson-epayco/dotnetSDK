@@ -3,4 +3,5 @@ bin/Release
 obj/*.*
 obj/
 .vs/*.*
+/.vs
 .vs/epaycoTest
