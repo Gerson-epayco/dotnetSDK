@@ -177,6 +177,7 @@ namespace epaycoTest.Controllers
               body.last_name,
               body.email,
               body.country,
+              body.city,
               body.cell_phone,
               body.url_response,
               body.url_confirmation,
