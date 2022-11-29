@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <Reference Include="epayco.net">
-      <HintPath>epayco\Debug\epayco.net.dll</HintPath>
+      <HintPath>epaycosdk\epayco.net.dll</HintPath>
     </Reference>
   </ItemGroup>
 
